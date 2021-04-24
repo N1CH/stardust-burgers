@@ -13,14 +13,22 @@
     <header>
         <div id="nav-wrapper">
             <nav id="nav">
-                <div class="nav-content">
+                <div class="nav-content fixed-top">
                     <a href="index.html" class="nav-logo" href="/">
                         <img src="./assets/burgerlogo.png" width="130px">
                     </a>
                     <ul>
-                        <li class="">
-                            <a href="menu.html">MENU</a>
-                        </li>
+                        <li class="dropdown">
+                            <a class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Menu
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <a class="dropdown-item" href="#Hamburguesas">Hamburgesas</a>
+                              <a class="dropdown-item" href="#">Veggie</a>
+                              <a class="dropdown-item" href="#HotDogs">Hotdogs</a>
+                              <a class="dropdown-item" href="#Postres">Postres</a>
+                              <a class="dropdown-item" href="#">Tragos</a>
+                            </div>
                         <li class="">
                             <a href="/pedidos">PEDIDOS</a>
                         </li>
@@ -42,9 +50,9 @@
                 <div class="col-md">
                     <h1 class="description"><strong>Lorem ipsum</strong> dolor sit amet consectetur adipisicing elit. Deleniti perferendis, vero earum voluptates cum eaque optio quam animi nihil possimus vitae accusantium, incidunt aliquid ea sint nam doloremque reprehenderit rem.</h1>
                 </div>
-                <div class="buffer"></div>
-                <!--
-                <section id="menu">
+                <div class="buffer-secciones"></div>
+               
+                <section id="Hamburguesas">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md">
@@ -59,11 +67,48 @@
                                 <img src= "./assets/triple.png" width="400px">
                                 <h1 class="menu-options">Jonathan Joestar</h1>
                             </div>
+                        
                         </div>
                         
                     </div>
                 </section>
-                -->
+                <div class="buffer-secciones"></div>
+                <section id="HotDogs">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md">
+                                <img src= "./assets/Stroheim.png" width="400px">
+                                <h1 class="menu-options">Stroheim</h1>
+                            </div>
+                            <div class="col-md">
+                                <img src= "./assets/Zeppeli.png" width="400px" height="300">
+                                <h1 class="menu-options">Zeppeli</h1>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="buffer-secciones"></div>
+
+                <section id="Postres">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md">
+                                <img src= "./assets/tiramisu.png" width="400px">
+                                <h1 class="menu-options">Iggy</h1>
+                            </div>
+                            <div class="col-md">
+                                <img src= "./assets/suneater.png" width="400px">
+                                <h1 class="menu-options">Sun eater</h1>
+                            </div>
+                            <div class="col-md">
+                                <img src= "./assets/uravity.png" width="400px">
+                                <h1 class="menu-options">Uravity</h1>
+                            </div>
+                        </div>    
+                    </div>
+                </section>
+             
             </div>
         </div>
     </div>
