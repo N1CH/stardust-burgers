@@ -203,6 +203,14 @@ input[type="color"]:focus,
   outline: 0 none;
 }
 
+
+
+@font-face {
+    font-family: letrafacha;
+    src: url(BubbleDriving.ttf);
+}
+
+
 #exampleFormControlTextarea1,
 .form-control {
     border: 1px solid black;
