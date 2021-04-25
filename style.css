@@ -62,8 +62,8 @@ body {
     padding-bottom: 2.5em;
     margin-right: 36px;
     position: relative;
+    vertical-align: bottom;
 }
-
 
 a {
     color: black;
@@ -74,9 +74,7 @@ a {
 .nav-logo {
     padding: 3px 3px;
     margin: 0;
-}
-
-
+}       
 
 .content {
     left: 0;
@@ -125,3 +123,40 @@ a {
     height: 20rem;
 }
 
+.form-group {
+    width: 18rem;
+    padding-bottom: 10px;
+}
+
+.subtitle {
+    color: white;
+    font-size: 3rem;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.contacts {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+}
+
+#exampleInputMessage1 {
+    height: 8rem;
+    text-align: left;
+    vertical-align: top;
+}
+
+.form-check-label {
+    font-size: 1rem;
+    color: white;
+}
+
+.btn {
+    margin-top: 20px;
+    width: 100px;
+    border: white;
+    background-color: white;
+    color: black;
+    border-radius: 15px;
+}
