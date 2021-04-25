@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <!-- BARRA DE NAVEGACION -->
     <header>
         <div id="nav-wrapper">
             <nav id="nav">
@@ -19,7 +20,7 @@
                     </a>
                     <ul>
                         <li class="dropdown">
-                            <a class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                               Menu
                             </a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -29,29 +30,39 @@
                               <a class="dropdown-item" href="#postres">Postres</a>
                               <a class="dropdown-item" href="#tragos">Tragos</a>
                             </div>
-                        <li class="">
-                            <a href="#pedidos">PEDIDOS</a>
+                        <li>
+                            <a class="btn btn-light shadow-none" href="#pedidos">PEDIDOS</a>
                         </li>
-                        <li class="">
-                            <a href="#contacto">CONTACTO</a>
+                        <li>
+                            <a class="btn btn-light shadow-none" href="#contacto">CONTACTO</a>
                         </li>
                     </ul>
                 </div>
             </nav>
         </div>
     </header>
+
+    <!-- IMAGEN DE FONDO -->
     <div class="background-image"></div>
+
+    <!-- CONTENIDO DE LA PAGINA -->
     <div class="content">
         <div class="container-fluid">
             <div class="row">
+
+                <!-- INTRODUCCION A LA PAGINA -->
+
                 <div class="col-md">
                     <img src="./assets/triplepapas.png" width="100%" alt="triplepapas">
                 </div>
                 <div class="col-md">
                     <h1 class="description"><strong>Lorem ipsum</strong> dolor sit amet consectetur adipisicing elit. Deleniti perferendis, vero earum voluptates cum eaque optio quam animi nihil possimus vitae accusantium, incidunt aliquid ea sint nam doloremque reprehenderit rem.</h1>
                 </div>
+
                 <div class="buffer"></div>
-                <div id="Hamburguesas" class="buffer"></div>
+                <div id="hamburguesas" class="buffer"></div>
+
+                <!-- TARJETA DE HAMBURGESAS -->
                 <section class="card">
                     <div class="container-fluid">
                         <div class="row">
@@ -67,12 +78,13 @@
                                 <img src= "./assets/triple.png" width="400px">
                                 <h1 class="menu-options">Jonathan Joestar</h1>
                             </div>
-                        
                         </div>
-                        
                     </div>
                 </section>
-                <div id="HotDogs" class="buffer"></div>
+                
+                <div id="hotdogs" class="buffer"></div>
+
+                <!-- TARJETA DE HOTDOGS -->
                 <section class="card">
                     <div class="container-fluid">
                         <div class="row">
@@ -92,8 +104,9 @@
                     </div>
                 </section>
 
-                <div id="Postres" class="buffer"></div>
+                <div id="postres" class="buffer"></div>
 
+                <!-- TARJETA DE POSTRES -->
                 <section class="card">
                     <div class="container-fluid">
                         <div class="row">
@@ -103,7 +116,7 @@
                             </div>
                             <div class="col-md">
                                 <img src= "./assets/suneater.png" width="400px">
-                                <h1 class="menu-options">Sun eater</h1>
+                                <h1 class="menu-options">Suneater</h1>
                             </div>
                             <div class="col-md">
                                 <img src= "./assets/uravity.png" width="400px">
@@ -115,6 +128,10 @@
 
                 <div id="contacto" class="buffer"></div>
 
+                <!-- ZONA DE PEDIDOS -->
+
+
+                <!-- TARJETA DE CONTACTO -->
                 <section>
                     <form>
                         <div class="container-fluid card">
@@ -122,33 +139,35 @@
                             <div class="row">
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Nombre">
+                                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Nombre" required>
                                     </div>
                                     <div class="form-group">
                                       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresar email">
                                     </div>
-                                    <button type="submit" class="btn btn-primary">Enviar</button>
+                                    <button type="submit" class="btn btn-primary shadow-none">Enviar</button>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="exampleInputTitle1" placeholder="Asunto">
+                                        <input type="text" class="form-control" id="exampleInputTitle1" placeholder="Asunto" required>
                                     </div>
                                     <div class="form-group">
-                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Mensaje"></textarea>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Mensaje" required></textarea>
                                       </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="contacts">
                                         <h1>Seguinos en:</h1>
-                                        <a href="https://www.facebook.com/"><img src="./assets/facebook.png" width="50px"></a>
-                                        <a href="https://www.instagram.com/"><img src="./assets/instagram.png" width="50px"></a>
+                                        <a href="https://www.facebook.com/"><img class="logos" src="./assets/facebook.png" width="50px"></a>
+                                        <a href="https://www.instagram.com/"><img class="logos" src="./assets/instagram.png" width="50px"></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </form>
                 </section>
+
                 <div class="buffer-min"></div>
+
             </div>
         </div>
     </div>
