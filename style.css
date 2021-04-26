@@ -16,9 +16,6 @@ body {
     overflow: scroll;
 }
 
-
-
-
 #nav-wrapper {
     position: sticky;
     top: 0;
@@ -59,6 +56,14 @@ body {
     font-size: 1.250rem;
     text-transform: uppercase;
     font-weight: 600;
+}
+
+.navbar-burger {
+    line-height: 70px;
+}
+
+.navbar-burger a {
+    font-weight: bold;
 }
 
 .responsive {
@@ -236,6 +241,14 @@ input[type="color"]:focus,
     border: 1px solid black;
 }
 
+/*Boton*/
+.boton {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+}
+
 
 /* MEDIA QUERY PARA CELULARES (ESTO SIEMPRE QUEDA AL FINAL DEL ARCHIVO) */
 @media all and (max-width: 768px) {
@@ -260,18 +273,18 @@ input[type="color"]:focus,
         width: 300px;
     }
 
+    .btn-send {
+        display: none;
+    }
+
+    .btn-primary {
+        margin-top: 5px;  
+        margin-bottom: 30px; 
+    }
+
     .responsive {
         display: block;
     }
 
     
-}
-
-
-/*Boton*/
-.boton {
-    width: 35px;
-    height: 5px;
-    background-color: black;
-    margin: 6px 0;
 }
