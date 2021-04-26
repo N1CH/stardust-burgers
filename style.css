@@ -58,6 +58,10 @@ body {
     font-weight: 600;
 }
 
+.responsive {
+    display: none;
+}
+
 .dropdown {
     display: inline-block;
     padding-bottom: 2.5em;
@@ -99,13 +103,19 @@ body {
 .description {
     color: white;
     font-family: oswald,Sans-serif;
-    font-size: 2,5rem;
+    font-size: 3rem;
 }
 
 .menu-options {
     color: black;
     text-align: center;
     font-size: 2,5rem;
+}
+
+.menu-images {
+    display: grid;
+    justify-content: center;
+    margin: auto;
 }
 
 .buffer-min {
@@ -203,7 +213,6 @@ input[type="color"]:focus,
   outline: 0 none;
 }
 
-
 /*fondo*/
 #myVideo {
     position: fixed;
@@ -214,16 +223,43 @@ input[type="color"]:focus,
     z-index: -1;
 }
   
-
-
-
 @font-face {
     font-family: letrafacha;
     src: url(BubbleDriving.ttf);
 }
 
-
 #exampleFormControlTextarea1,
 .form-control {
     border: 1px solid black;
+}
+
+
+/* MEDIA QUERY PARA CELULARES (ESTO SIEMPRE QUEDA AL FINAL DEL ARCHIVO) */
+@media all and (max-width: 768px) {
+    
+    #nav .nav-content {
+        height: 75px;
+    }
+
+    .navbar-elem {
+        display: none;
+    }
+
+    .description {
+        font-size: 2rem;
+    }
+
+    .burger-logo {
+        width: 100px;
+    }
+
+    .menu-images {
+        width: 300px;
+    }
+
+    .responsive {
+        display: block;
+    }
+
+    
 }
