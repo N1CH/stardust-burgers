@@ -16,6 +16,9 @@ body {
     overflow: scroll;
 }
 
+
+
+
 #nav-wrapper {
     position: sticky;
     top: 0;
@@ -262,4 +265,13 @@ input[type="color"]:focus,
     }
 
     
+}
+
+
+/*Boton*/
+.boton {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
 }
