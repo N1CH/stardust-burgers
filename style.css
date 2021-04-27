@@ -20,7 +20,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .container-intro {
@@ -395,4 +395,5 @@ input[type="color"]:focus,
   from {opacity: .4}
   to {opacity: 1}
 }
+
 
