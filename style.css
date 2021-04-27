@@ -16,6 +16,13 @@ body {
     overflow: scroll;
 }
 
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 #nav-wrapper {
     position: sticky;
     top: 0;
@@ -118,12 +125,6 @@ body {
     color: black;
     text-align: center;
     font-size: 2,5rem;
-}
-
-.menu-images {
-    display: grid;
-    justify-content: center;
-    margin: auto;
 }
 
 .buffer-min {
