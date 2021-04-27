@@ -1,4 +1,7 @@
 html {
+    font-family: 'Montserrat', Arial, sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
     height: 100%;
     width: 100%;
     margin: auto;
@@ -20,13 +23,11 @@ body {
     padding: 3em;
     display: flex;
     flex-direction: row;
-    height: 70em;
-    margin-bottom: 30px;
+    height: 60em;
 }
 
 .container-item {
     padding-left: 2em;
-    align-self: center;
 }
 
 .container-menu {
@@ -60,14 +61,15 @@ body {
 #nav .nav-content ul {
     align-self: flex-end;
     justify-content: center;
+    align-self: center;
     list-style: none;
-    margin: 0 0 -3px 0;
+    margin: 0 0 -4px 0;
     padding: 0;
 }
 
 #nav .nav-content ul li {
     display: inline-block;
-    padding-bottom: 2.5em;
+    padding-bottom: 2em;
     margin-right: 36px;
     position: relative;
 }
@@ -108,7 +110,7 @@ body {
     z-index: 9999;
     margin-left: 30px;
     margin-right: 20px;
-    margin-top: 0px;
+    margin-top: 100px;
 }
 
 .background-image {
@@ -129,14 +131,13 @@ body {
 }
 
 .description {
-    color: #F2F3EB;
-    font-family: "Montserrat";
+    color: white;
+    font-family: oswald,Sans-serif;
     font-size: 3rem;
-    text-align: center;
 }
 
 .menu-options {
-    color: #474544;
+    color: black;
     text-align: center;
     font-size: 2,5rem;
 }
@@ -149,22 +150,29 @@ body {
     height: 10rem;
 }
 
+.form-group {
+    width: 18rem;
+    padding-bottom: 10px;
+    border: black;
+    border-width: 30px;
+}
+
 .subtitle {
-    color: #474544;
+    color: black;
     font-size: 3rem;
     text-align: left;
     margin-bottom: 10px;
 }
 
 .contacts {
-    color: #474544;
+    color: black;
     text-align: center;
     font-size: 2rem;
 }
 
 .btn {
     background-color: transparent;
-    color: #474544;
+    color: black;
     border: transparent;
 }
 
@@ -175,13 +183,27 @@ body {
 
 .btn:focus {
     background-color: transparent;
-    color: #474544;
+    color: black;
     border: none;
     outline: none;
 }
 
 .dropdown-item:active {
-    background-color: #474544;
+    background-color: grey;
+}
+
+.btn-primary {
+    margin-top: 20px;
+    width: 100px;
+    border: black;
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+}
+
+.btn-primary:hover {
+    background-color: grey;
+    color: black;
 }
 
 .card {
@@ -248,7 +270,87 @@ input[type="color"]:focus,
     margin: 6px 0;
 }
 
-/* CONTACTO */
+
+/* MEDIA QUERY PARA CELULARES (ESTO SIEMPRE QUEDA AL FINAL DEL ARCHIVO) */
+@media all and (max-width: 768px) {
+    
+    #container {
+        margin: 20px auto;
+        width: 95%;
+    }
+
+    #nav .nav-content {
+        height: 75px;
+    }
+
+    .non-responsive {
+        display: none;
+    }
+
+    .description {
+        font-size: 2rem;
+    }
+
+    .burger-logo {
+        width: 100px;
+    }
+
+    .menu-images {
+        width: 300px;
+    }
+
+    .img-description {
+        width: 40em;
+    }
+
+    .btn-primary {
+        margin-top: 5px;  
+        margin-bottom: 30px; 
+    }
+
+    .responsive {
+        display: block;
+    }
+
+    
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 26px;
+    }
+
+    .underline {
+        width: 68px;
+    }
+
+    #form_button {
+        padding: 15px 25px;
+    }
+}
+  
+@media screen and (max-width: 420px) {
+    h1 {
+      font-size: 18px;
+    }
+    
+    .icon {
+      height: 35px;
+      width: 35px;
+    }
+    
+    .underline {
+      width: 53px;
+    }
+    
+    input[type='text'], [type='email'], select, textarea {
+      font-size: 0.875em;
+    }
+}
+
+
+/* TEST */
+  
   button {
     overflow: visible;
   }
@@ -265,7 +367,6 @@ input[type="color"]:focus,
   
   input {
     line-height: normal;
-    font-size: 4em;
   }
   
   textarea {
@@ -280,16 +381,14 @@ input[type="color"]:focus,
     position: relative;
   } */
   
-
   .contact form {
-    padding: 30px;
-    margin: 20px 0;
-    padding-bottom: 0px;
+    padding: 37.5px;
+    margin: 50px 0;
   }
   
   .contact h1 {
     color: #474544;
-    font-size: 30px;
+    font-size: 32px;
     font-weight: 700;
     letter-spacing: 7px;
     text-align: center;
@@ -312,7 +411,7 @@ input[type="color"]:focus,
     border: none;
       border-bottom: solid 2px #474544;
       color: #474544;
-      font-size: 1.250em;
+      font-size: 1.000em;
     font-weight: 400;
     letter-spacing: 1px;
       margin: 0em 0 1.875em 0;
@@ -367,7 +466,7 @@ input[type="color"]:focus,
     cursor: pointer;
     display: inline-block;
     font-family: 'Helvetica', Arial, sans-serif;
-    font-size: 1rem;
+    font-size: 0.875em;
     font-weight: bold;
     outline: none;
     padding: 20px 35px;
@@ -383,85 +482,4 @@ input[type="color"]:focus,
     background: #474544;
     color: #F2F3EB;
   }
-
-/* MEDIA QUERY PARA CELULARES (ESTO SIEMPRE QUEDA AL FINAL DEL ARCHIVO) */
-@media all and (max-width: 800px) {
-    
-    #nav .nav-content {
-        height: 75px;
-    }
-
-    .non-responsive {
-        display: none;
-    }
-
-    .container-intro {
-        padding: 2em;
-        flex-direction: column;
-        height: 40em;
-    }
-
-    .container-item {
-        padding-top: 2em;
-    }
-
-    .description {
-        font-size: 2rem;
-    }
-
-    .burger-logo {
-        width: 100px;
-    }
-
-    .menu-images {
-        width: 300px;
-    }
-
-    .img-description {
-        width: 35em;
-    }
-
-    .btn-primary {
-        margin-top: 5px;  
-        margin-bottom: 30px; 
-    }
-
-    .responsive {
-        display: block;
-    }
-
-    #container {
-        margin: 20px auto;
-        width: 95%;
-    }
-
-}
-
-@media screen and (max-width: 480px) {
-    h1 {
-        font-size: 26px;
-    }
-
-    .underline {
-        width: 68px;
-    }
-
-    #form_button {
-        padding: 15px 25px;
-    }
-}
   
-@media screen and (max-width: 420px) {
-
-    h1 {
-      font-size: 18px;
-    }
-    
-    .underline {
-      width: 53px;
-    }
-    
-    input[type='text'], [type='email'], select, textarea {
-      font-size: 0.875em;
-    }
-}
