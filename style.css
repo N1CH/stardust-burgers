@@ -1,145 +1,18 @@
 html {
-    height: 100%;
-    width: 100%;
     margin: auto;
-    overflow: hidden;
     scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
     padding: 0;
-    height: 100%;
-    width: 100%;
-    font-family: sans-serif;
     font-size: 62.5%;
-    overflow: scroll;
-}
-
-.container-intro {
-    padding: 3em;
-    display: flex;
-    flex-direction: row;
-    height: 70em;
-    margin-bottom: 30px;
-}
-
-.container-item {
-    padding-left: 2em;
-    align-self: center;
-}
-
-.container-menu {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-#nav-wrapper {
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 95px;
-    z-index: 100;   
-}
-
-#nav .nav-content {
-    height: 95px;
-    box-shadow: 2px 2px 5px;
-    box-sizing: border-box;
-    transition: height .5s;
-    margin-bottom: 5px;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 2.5%;
-    background-color: white;
-}
-
-#nav .nav-content ul {
-    align-self: flex-end;
-    justify-content: center;
-    list-style: none;
-    margin: 0 0 -3px 0;
-    padding: 0;
-}
-
-#nav .nav-content ul li {
-    display: inline-block;
-    padding-bottom: 2.5em;
-    margin-right: 36px;
-    position: relative;
-}
-
-#nav .nav-content ul li a, #nav-mobile .nav-content ul li a {
-    font-size: 1.250rem;
-    text-transform: uppercase;
-    font-weight: 600;
-}
-
-.navbar-burger {
-    line-height: 70px;
-}
-
-.navbar-burger a {
-    font-weight: bold;
-}
-
-.responsive {
-    display: none;
-}
-
-.dropdown {
-    display: inline-block;
-    padding-bottom: 2.5em;
-    margin-right: 36px;
-    position: relative;
 }
 
 .nav-logo {
     padding: 3px 3px;
     margin: 0;
 }       
-
-.content {
-    left: 0;
-    right: 0;
-    z-index: 9999;
-    margin-left: 30px;
-    margin-right: 20px;
-    margin-top: 0px;
-}
-
-.background-image {
-    background-image: url(./assets/burgershop1.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: fixed;
-    left: 0;
-    right: 0;
-    display: block;
-    height: 1080px;
-    -webkit-filter: blur(6px);
-    -moz-filter: blur(6px);
-    -o-filter: blur(6px);
-    -ms-filter: blur(6px);
-    filter: blur(6px);
-    z-index: -1;
-}
-
-.description {
-    color: #F2F3EB;
-    font-family: "Montserrat";
-    font-size: 3rem;
-    text-align: center;
-}
-
-.menu-options {
-    color: #474544;
-    text-align: center;
-    font-size: 2,5rem;
-}
 
 .buffer-min {
     height: 2rem;
@@ -149,74 +22,8 @@ body {
     height: 10rem;
 }
 
-.subtitle {
-    color: #474544;
-    font-size: 3rem;
-    text-align: left;
-    margin-bottom: 10px;
-}
 
-.contacts {
-    color: #474544;
-    text-align: center;
-    font-size: 2rem;
-}
-
-.btn {
-    background-color: transparent;
-    color: #474544;
-    border: transparent;
-}
-
-.btn:hover {
-    background-color: transparent;
-    color: black;
-}
-
-.btn:focus {
-    background-color: transparent;
-    color: #474544;
-    border: none;
-    outline: none;
-}
-
-.dropdown-item:active {
-    background-color: #474544;
-}
-
-.card {
-    background-color: white;
-    width: 99%;
-    border-radius: 10px;
-    border: black;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    box-shadow: 3px 3px 6px;
-}
-
-#exampleFormControlTextarea1,
-textarea:focus,
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="date"]:focus,
-input[type="month"]:focus,
-input[type="time"]:focus,
-input[type="week"]:focus,
-input[type="number"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="color"]:focus,
-.uneditable-input:focus {   
-  border-color: rgba(172, 172, 172, 0.8);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(99, 99, 99, 0.6);
-  outline: 0 none;
-}
-
-/*fondo*/
+/* FONDO */
 #myVideo {
     position: fixed;
     right: 0;
@@ -225,44 +32,8 @@ input[type="color"]:focus,
     min-height: 100%;
     z-index: -1;
 }
-  
-@font-face {
-    font-family: letrafacha;
-    src: url(BubbleDriving.ttf);
-}
-
-#exampleFormControlTextarea1,
-.form-control {
-    border: 1px solid black;
-}
-
-#exampleInputName1 {
-    margin-top: 4em;
-}
-
-/*Boton*/
-.boton {
-    width: 35px;
-    height: 5px;
-    background-color: black;
-    margin: 6px 0;
-}
 
 /* CONTACTO */
-  button {
-    overflow: visible;
-  }
-  
-  button, select {
-    text-transform: none;
-  }
-  
-  button, input, select, textarea {
-    color: #5A5A5A;
-    font: inherit;
-    margin: 0;
-  }
-  
   input {
     line-height: normal;
     font-size: 4em;
@@ -271,197 +42,136 @@ input[type="color"]:focus,
   textarea {
     overflow: auto;
   }
-  
-  /* #container {
-    background-color: #F2F3EB;
-    border: solid 3px #474544;
-    max-width: 768px;
-    margin: 60px auto;
-    position: relative;
-  } */
-  
 
   .contact form {
     padding: 30px;
     margin: 20px 0;
     padding-bottom: 0px;
-  }
-  
-  .contact h1 {
+}
+
+.contact h1 {
     color: #474544;
     font-size: 30px;
     font-weight: 700;
     letter-spacing: 7px;
     text-align: center;
     text-transform: uppercase;
-  }
-  
-  .underline {
+}
+
+.underline {
     border-bottom: solid 2px #474544;
     margin: -0.512em auto;
     width: 80px;
-  }
-  
-  .email {
-      float: right;
-      width: 45%;
-  }
-  
-  input[type='text'], [type='email'], select, textarea {
-      background: none;
+}
+
+.email {
+    float: right;
+    width: 45%;
+}
+
+#exampleFormControlTextarea1,
+textarea:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+.uneditable-input:focus {
+    border-color: rgba(172, 172, 172, 0.8);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(99, 99, 99, 0.6);
+    outline: 0 none;
+}
+
+input[type='text'], [type='email'], select, textarea {
+    background: none;
     border: none;
-      border-bottom: solid 2px #474544;
-      color: #474544;
-      font-size: 1.250em;
+    border-bottom: solid 2px #474544;
+    color: #474544;
+    font-size: 1.250em;
     font-weight: 400;
     letter-spacing: 1px;
-      margin: 0em 0 1.875em 0;
-      padding: 0 0 0.875em 0;
+    margin: 0em 0 1.875em 0;
+    padding: 0 0 0.875em 0;
     text-transform: uppercase;
-      width: 100%;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      -ms-box-sizing: border-box;
-      -o-box-sizing: border-box;
-      box-sizing: border-box;
-      -webkit-transition: all 0.3s;
-      -moz-transition: all 0.3s;
-      -ms-transition: all 0.3s;
-      -o-transition: all 0.3s;
-      transition: all 0.3s;
-  }
-  
-  input[type='text']:focus, [type='email']:focus, textarea:focus {
-      outline: none;
-      padding: 0 0 0.875em 0;
-  }
-  
-  .message {
-      float: none;
-  }
-  
-  .name {
-      float: left;
-      width: 45%;
-  }
-  
-  .subject {
     width: 100%;
-  }
-  
-  .telephone {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+input[type='text']:focus, [type='email']:focus, textarea:focus {
+    outline: none;
+    padding: 0 0 0.875em 0;
+}
+
+.message {
+    float: none;
+}
+
+.name {
+    float: left;
+    width: 45%;
+}
+
+.subject {
     width: 100%;
-  }
-  
-  textarea {
-      line-height: 150%;
-      height: 150px;
-      resize: none;
+}
+
+.telephone {
     width: 100%;
-  }
-  
-  #form_button {
+}
+
+textarea {
+    line-height: 150%;
+    height: 150px;
+    resize: none;
+    width: 100%;
+}
+
+#form_button {
     background: none;
     border: solid 2px #474544;
     color: #474544;
     cursor: pointer;
     display: inline-block;
-    font-family: 'Helvetica', Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 1rem;
     font-weight: bold;
     outline: none;
     padding: 20px 35px;
     text-transform: uppercase;
     -webkit-transition: all 0.3s;
-      -moz-transition: all 0.3s;
-      -ms-transition: all 0.3s;
-      -o-transition: all 0.3s;
-      transition: all 0.3s;
-  }
-  
-  #form_button:hover {
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#form_button:hover {
     background: #474544;
     color: #F2F3EB;
-  }
-
-/* MEDIA QUERY PARA CELULARES (ESTO SIEMPRE QUEDA AL FINAL DEL ARCHIVO) */
-@media all and (max-width: 800px) {
-    
-    #nav .nav-content {
-        height: 75px;
-    }
-
-    .non-responsive {
-        display: none;
-    }
-
-    .container-intro {
-        padding: 2em;
-        flex-direction: column;
-        height: 40em;
-    }
-
-    .container-item {
-        padding-top: 2em;
-    }
-
-    .description {
-        font-size: 2rem;
-    }
-
-    .burger-logo {
-        width: 100px;
-    }
-
-    .menu-images {
-        width: 300px;
-    }
-
-    .img-description {
-        width: 35em;
-    }
-
-    .btn-primary {
-        margin-top: 5px;  
-        margin-bottom: 30px; 
-    }
-
-    .responsive {
-        display: block;
-    }
-
-    #container {
-        margin: 20px auto;
-        width: 95%;
-    }
-
 }
 
-@media screen and (max-width: 480px) {
-    h1 {
-        font-size: 26px;
-    }
-
-    .underline {
-        width: 68px;
-    }
-
-    #form_button {
-        padding: 15px 25px;
-    }
+/* FUENTES */
+h1.display-2
+{
+    font-family: 'Rock Salt', cursive;
+    font-size: 5rem;
+    letter-spacing: 5px;
 }
-  
-@media screen and (max-width: 420px) {
 
-    h1 {
-      font-size: 18px;
-    }
-    
-    .underline {
-      width: 53px;
-    }
-    
-    input[type='text'], [type='email'], select, textarea {
-      font-size: 0.875em;
-    }
+div div h2 {
+    font-family: 'Rock Salt', cursive;
+}
+
+body,
+h2,
+p,
+.lead {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
 }
