@@ -247,6 +247,32 @@ input[type="email"]:focus {
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
 }
 
+/* MODAL CONTACTO */
+.alerta-glass {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
+    color: white;
+    font-size: 1.2rem;
+    padding: 20px;
+    z-index: 9999;
+}
+
+.alerta-glass p {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
 /* TARJETAS */
 .glass {
     background-color: rgba(45, 45, 45, 0.6);
@@ -428,5 +454,11 @@ input[type="email"]:focus {
 
     footer p {
         font-size: 0.7rem;
+    }
+
+    /* MODAL CONTACTO */
+    .alerta-glass {
+        font-size: 0.6rem;
+        padding: 20px;
     }
 }

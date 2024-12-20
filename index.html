@@ -195,21 +195,21 @@
                 <h3>&bull; Escribinos &bull;</h3>
                 <div class="underline"></div>
                 <form id="contact_form">
-                  <div class="name">
-                    <label for="name"></label>
-                    <input type="text" placeholder="Nombre" name="name" id="name_input" required>
-                  </div>
-                  <div class="email">
-                    <label for="email"></label>
-                    <input type="email" placeholder="Email" name="email" id="email_input" required>
-                  </div>
-                  <div class="message">
-                    <label for="message"></label>
-                    <textarea name="message" placeholder="Mensaje" id="message_input" cols="15" rows="3" required></textarea>
-                  </div>
-                  <div class="submit">
-                    <input class="py-lg-3 px-lg-4 py-2 px-3" type="submit" value="Enviar" id="form_button" href="" />
-                  </div>
+                    <div class="name">
+                        <label for="name"></label>
+                        <input type="text" placeholder="Nombre" name="name" id="name_input" required>
+                    </div>
+                    <div class="email">
+                        <label for="email"></label>
+                        <input type="email" placeholder="Email" name="email" id="email_input" required>
+                    </div>
+                    <div class="message">
+                        <label for="message"></label>
+                        <textarea name="message" placeholder="Mensaje" id="message_input" cols="15" rows="3" required></textarea>
+                    </div>
+                        <div class="submit">
+                        <input class="py-lg-3 px-lg-4 py-2 px-3" type="submit" value="Enviar" id="form_button" href="" />
+                    </div>
                 </form>
                 <div class="text-center mb-5">
                     <h3>&bull; Seguinos &bull;</h3>
@@ -221,16 +221,62 @@
                 </div>
             </div>
         </section>
+
+        <!-- MODAL -->
+        <div id="alerta" class="alerta-glass" style="display: none;">
+            ¡Tu mensaje fue enviado correctamente!
+        </div>
+
         <div class="buffer-min"></div>
     </main>
 
     <!-- FOOTER -->
     <footer class="glass text-center">
-            <p class="text-center py-3 mb-0 text-white fw-light">© 2024 Jero's Burgers</p>
+            <p class="text-center py-3 mb-0 text-white fw-light">© 2024 Stardust Burgers</p>
     </footer>
 
 
     <!-- SCRIPTS -->
+    <script>
+        const boton = document.getElementById('form_button');
+        const alerta = document.getElementById('alerta');
+        const formulario = document.getElementById('contact_form');
+
+        function mostrarAlerta(mensaje) {
+            alerta.innerHTML = `<p>${mensaje}</p>`;
+            alerta.style.display = 'flex';
+            setTimeout(() => {
+                alerta.style.opacity = '1';
+            }, 50);
+            
+            setTimeout(() => {
+                alerta.style.opacity = '0';
+                setTimeout(() => {
+                    alerta.style.display = 'none';
+                }, 500);
+            }, 2000);
+        }
+
+        function validarFormulario() {
+            const nombre = document.getElementById('name_input').value.trim();
+            const email = document.getElementById('email_input').value.trim();
+            const mensaje = document.getElementById('message_input').value.trim();
+
+            if (nombre === '' || email === '' || mensaje === '') {
+                mostrarAlerta('Por favor, completa todos los campos del formulario.');
+                return false;
+            }
+            return true;
+        }
+
+        boton.addEventListener('click', function(event) {
+            event.preventDefault();
+            if (validarFormulario()) {
+                mostrarAlerta('¡Tu mensaje fue enviado correctamente!');
+                formulario.reset();
+            }
+        });
+    </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
