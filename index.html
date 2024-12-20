@@ -4,152 +4,196 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="icon" href="./assets/siteicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     
     <!-- FUENTES -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@400..900&display=swap');
     </style>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rock+Salt&display=swap');
-    </style>
-    <title>Jero's Burgers</title>
+
+    <title>Stardust Burgers</title>
 </head>
 
 <body>
-    <!-- BARRA DE NAVEGACION -->
+
+    <!-- NAVBAR -->
     <header>
-        <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary user-select-none">
+        <nav class="navbar fixed-top navbar-expand-lg glass user-select-none">
             <div class="container-fluid">
-                <!-- Logo -->
-                <a href="" class="nav-logo ms-lg-4 " aria-current="page">
-                    <img class="burger-logo" src="./assets/burgerlogo.png" width="130em">
+
+                <!-- LOGO -->
+                <a href="" class="nav-logo ms-lg-4" aria-current="page">
+                    <img class="img-fluid" src="./assets/images/burger-logo.png" width="80rem">
                 </a>
+                <div class="d-flex ms-auto me-3 gap-4 fw-bold">
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                    <!-- MENU -->
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            MENU
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end glass text-end">
+                            <li><a class="dropdown-item text-white" href="#hamburguesas">&bull; Hamburguesas &bull;</a></li>
+                            <li><a class="dropdown-item text-white" href="#hotdogs">&bull; Panchos &bull;</a></li>
+                            <li><a class="dropdown-item text-white" href="#shakes">&bull; Batidos &bull;</a></li>
+                            <li><a class="dropdown-item text-white" href="#tragos">&bull; Tragos &bull;</a></li>
+                        </ul>
+                    </div>
 
-                <div class="collapse navbar-collapse text-end fw-bold" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto me-3 fs-5 gap-lg-4">
-                        <li class="nav-item dropdown pb-0 me-0">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Menú principal">
-                                MENU
-                            </a>
-                            <ul class="dropdown-menu me-auto text-lg-start text-end">
-                                <li><a class="dropdown-item" href="#hamburguesas">&bull; Hamburguesas &bull;</a></li>
-                                <li><a class="dropdown-item" href="#veggie">&bull; Veggie &bull;</a></li>
-                                <li><a class="dropdown-item" href="#hotdogs">&bull; Hotdogs &bull;</a></li>
-                                <li><a class="dropdown-item" href="#postres">&bull; Postres &bull;</a></li>
-                                <li><a class="dropdown-item" href="#tragos">&bull; Tragos &bull;</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contacto">&bull; PEDIDOS &bull;</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contacto">&bull; CONTACTO &bull;</a>
-                        </li>
-                    </ul>
+                    <!-- CONTACTO -->
+                    <a class="nav-link" href="#contacto">&bull; CONTACTO &bull;</a>
                 </div>
             </div>
         </nav>
     </header>
     
 
-    <!-- IMAGEN DE FONDO -->
-    <!--<div class="background-image position-fixed w-100 h-100" style="background-image: url('./assets/burgershop1.png'); filter: blur(6px);"></div> -->
+    <!-- BACKGROUND -->
+    <div class="bg position-fixed" style="background-image: url(assets/bg/burgershop.png); width: 100%; height: 100vh; background-repeat: no-repeat; background-size: cover; filter:blur(5px);z-index: -1;"></div>
 
-    <video autoplay muted loop id="myVideo">
-        <source src="./assets/spacee.mp4" type="video/mp4">
+    <video autoplay muted loop id="myVideo" style="filter: blur(1px);">
+        <source src="./assets/bg/space.mp4" type="video/mp4">
     </video>
 
-    <!-- CONTENIDO DE LA PAGINA -->
-    <main class="ms-5 me-5 mt-5">
+    <!-- CONTENT -->
+    <main class="ms-5 me-5">
 
-        <!-- INTRODUCCION A LA PAGINA -->
-        <section class="row d-flex justify-content-between align-items-center min-vh-100 mt-sm-5 pt-sm-5">
-            <div class="col-md-6">
-                <img class="img-fluid d-block mx-auto w-75 w-sm-75 w-md-50" src="./assets/triplepapas.png" alt="Hamburguesa Triple con Papas Fritas">
+        <!-- HERO SECTION -->
+        <section class="hero row d-flex min-vh-100">
+            <div data-aos="fade-up-right" class="col-md-5">
+                <img class="img-hero mx-auto" src="./assets/images/hero.png" alt="Hamburguesa Doble con Papas Fritas">
             </div>
-            <div class="col-md-6 text-center text-md-right">
-                <h1 class="display-2 text-white mb-4 user-select-none fw-bolder">Jero's Burgers</h1>
-                <h2 class="text-center text-light mt-5" style="font-size: 1.6rem;">Deliciosas hamburguesas, papas fritas crujientes y bebidas refrescantes, todo preparado con ingredientes frescos. ¡Tu lugar ideal para satisfacer todos tus antojos!</h2>
+            <div data-aos="fade-up-right" class="col-md-7 text-center text-md-right">
+                <h1 class="text-white user-select-none fw-bolder">Stardust Burgers</h1>
+                <img class="img-hero-mobile mx-auto" src="./assets/images/hero.png" alt="Hamburguesa Doble con Papas Fritas">
+                <h2 class="description text-center text-light mt-5">Deliciosas hamburguesas, papas fritas crujientes y bebidas refrescantes, todo preparado con ingredientes frescos.<br> ¡Tu lugar ideal para satisfacer todos tus antojos!</h2>
             </div>
         </section>
 
         <div id="hamburguesas" class="buffer-min"></div>
 
         <!-- TARJETA DE HAMBURGUESAS -->
-        <section class="card shadow-sm rounded-3 py-4 text-center">
+        <section class="glass shadow-sm rounded-3 py-4 text-center contact">
+            <h3>&bull; Hamburguesas &bull;</h3>
+            <div class="underline"></div>
             <div class="d-flex flex-wrap justify-content-evenly py-4">
-                <div>
-                    <img class="menu-images" src= "./assets/onion.png" width="350px">
-                    <h2>&bull; Star Platinum &bull;</h2>
+                <div data-aos="zoom-in" class="img-container">
+                    <img class="menu-images img-fluid text-green" src= "./assets/burgers/walterjr.png">
+                    <h4>&bull; Walter Jr &bull;</h4>
                 </div>
-                <div>
-                    <img class="menu-images" src= "./assets/bbq.png" width="350px">
-                    <h2>&bull; Crazy Diamond &bull;</h2>
+                <div data-aos="zoom-in" class="img-container">
+                    <img class="menu-images img-fluid" src= "./assets/burgers/joestar.png">
+                    <h4>&bull; Joestar &bull;</h4>
                 </div>
-                <div>
-                    <img class="menu-images" src= "./assets/triple.png" width="350px">
-                    <h2>&bull; Jonathan Joestar &bull;</h2>
+                <div data-aos="zoom-in" class="img-container">
+                    <img class="menu-images img-fluid" src= "./assets/burgers/kingcrimson.png">
+                    <h4>&bull; King Crimson &bull;</h4>
+                </div>
+                <div data-aos="zoom-in" class="img-container">
+                    <img class="menu-images img-fluid" src= "./assets/burgers/starplatinum.png">
+                    <h4>&bull; Star Platinum &bull;</h4>
+                </div>
+                <div data-aos="zoom-in" class="img-container">
+                    <img class="menu-images img-fluid" src= "./assets/burgers/crazydiamond.png">
+                    <h4>&bull; Crazy Diamond &bull;</h4>
+                </div>
+                <div data-aos="zoom-in" class="img-container">
+                    <img class="menu-images img-fluid text-green" src= "./assets/burgers/death13.png">
+                    <h4>&bull; Death 13 &bull;</h4>
+                </div>
+                <div data-aos="zoom-in" class="img-container">
+                    <img class="menu-images img-fluid" src= "./assets/burgers/hermitpurple.png">
+                    <h4>&bull; Hermit Purple &bull;</h4>
+                </div>
+                <div data-aos="zoom-in" class="img-container">
+                    <img class="menu-images img-fluid text-green" src= "./assets/burgers/stonefree.png">
+                    <h4>&bull; Stone Free &bull;</h4>
                 </div>
             </div>
         </section>
                 
-        <div id="hotdogs" class="buffer"></div>
+        <div id="hotdogs" class="buffer-min"></div>
 
-        <!-- TARJETA DE HOTDOGS -->
-        <section class="card shadow-sm rounded-3 py-4 text-center">
+        <!-- TARJETA DE PANCHOS -->
+        <section class="glass shadow-sm rounded-3 py-4 text-center">
+            <h3>&bull; Panchos &bull;</h3>
+            <div class="underline"></div>
             <div class="d-flex flex-wrap justify-content-evenly py-4">
-                <div>
-                    <img class="menu-images" src= "./assets/stroheim.png" width="350px">
-                    <h2>&bull; Stroheim &bull;</h2>
+                <div data-aos="zoom-in" class="img-container">
+                    <img class="menu-images img-fluid" src= "./assets/hotdogs/stroheim.png">
+                    <h4>&bull; Stroheim &bull;</h4>
                 </div>
-                <div>
-                    <img class="menu-images" src= "./assets/zeppeli.png" width="350px" height="250">
-                    <h2>&bull; Zeppeli &bull;</h2>
+                <div data-aos="zoom-in" class="img-container">
+                    <img class="menu-images img-fluid" src= "./assets/hotdogs/zeppeli.png">
+                    <h4>&bull; Zeppeli &bull;</h4>
                 </div>
-                <div>
-                    <img class="menu-images" src= "./assets/diavolo.png" width="350px" height="250">
-                    <h2>&bull; Diavolo &bull;</h2>
+                <div data-aos="zoom-in" class="img-container">
+                    <img class="menu-images img-fluid" src= "./assets/hotdogs/diavolo.png">
+                    <h4>&bull; Diavolo &bull;</h4>
                 </div>
             </div>
         </section>
 
-        <div id="postres" class="buffer"></div>
+        <div id="shakes" class="buffer-min"></div>
 
-        <!-- TARJETA DE POSTRES -->
-        <section class="card shadow-sm rounded-3 py-4 text-center">
+        <!-- TARJETA DE SHAKES -->
+        <section class="glass shadow-sm rounded-3 py-4 text-center">
+            <h3>&bull; Batidos &bull;</h3>
+            <div class="underline"></div>
             <div class="d-flex flex-wrap justify-content-evenly py-4">
-                <div>
-                    <img class="menu-images" src= "./assets/tiramisu.png" width="350px">
-                    <h2>&bull; Iggy &bull;</h2>
+                <div data-aos="zoom-in" class="img-container">
+                    <img class="menu-images img-fluid" src= "./assets/shakes/iggy.png">
+                    <h4>&bull; Iggy &bull;</h4>
                 </div>
-                <div>
-                    <img class="menu-images" src= "./assets/suneater.png" width="350px">
-                    <h2>&bull; Sun Eater &bull;</h2>
+                <div data-aos="zoom-in" class="img-container">
+                    <img class="menu-images img-fluid" src= "./assets/shakes/suneater.png">
+                    <h4>&bull; Sun Eater &bull;</h4>
                 </div>
-                <div>
-                    <img class="menu-images" src= "./assets/uravity.png" width="350px">
-                    <h2>&bull; Uravity &bull;</h2>
+                <div data-aos="zoom-in" class="img-container">
+                    <img class="menu-images img-fluid" src= "./assets/shakes/uravity.png">
+                    <h4>&bull; Uravity &bull;</h4>
+                </div>
+                <div data-aos="zoom-in" class="img-container">
+                    <img class="menu-images img-fluid" src= "./assets/shakes/wildvine.png">
+                    <h4>&bull; Wildvine &bull;</h4>
+                </div>
+            </div>
+        </section>
+
+        <div id="tragos" class="buffer-min"></div>
+
+        <!-- TARJETA DE TRAGOS -->
+        <section class="glass shadow-sm rounded-3 py-4 text-center">
+            <h3>&bull; Tragos &bull;</h3>
+            <div class="underline"></div>
+            <div class="d-flex flex-wrap justify-content-evenly py-4">
+                <div data-aos="zoom-in" class="img-container">
+                    <img class="menu-images img-fluid" src= "./assets/coctails/spike.png">
+                    <h4>&bull; Blue Spike &bull;</h4>
+                </div>
+                <div data-aos="zoom-in" class="img-container">
+                    <img class="menu-images img-fluid" src= "./assets/coctails/valentine.png">
+                    <h4>&bull; Red Valentine &bull;</h4>
+                </div>
+                <div data-aos="zoom-in" class="img-container">
+                    <img class="menu-images img-fluid" src= "./assets/coctails/jet.png">
+                    <h4>&bull; Jet Black &bull;</h4>
                 </div>
             </div>
         </section>
 
         <div id="contacto" class="buffer"></div>
-
-        <!-- ZONA DE PEDIDOS -->
-
-
+        
         <!-- TARJETA DE CONTACTO -->
         <section class="contact">
-            <div class="card shadow-sm rounded-3 py-4 user-select-none">
-                <h1>&bull; Escribinos &bull;</h1>
-                <div class="underline">
-                </div>
+            <div class="glass shadow-sm rounded-3 py-4 user-select-none">
+                <h3>&bull; Escribinos &bull;</h3>
+                <div class="underline"></div>
                 <form id="contact_form">
                   <div class="name">
                     <label for="name"></label>
@@ -164,26 +208,34 @@
                     <textarea name="message" placeholder="Mensaje" id="message_input" cols="15" rows="3" required></textarea>
                   </div>
                   <div class="submit">
-                    <input type="submit" value="Enviar" id="form_button" href="" />
+                    <input class="py-lg-3 px-lg-4 py-2 px-3" type="submit" value="Enviar" id="form_button" href="" />
                   </div>
                 </form>
                 <div class="text-center mb-5">
-                    <h1>Seguinos en:</h1>
-                    <a href="https://www.facebook.com/"><img class="logos" src="./assets/facebook.png" width="50px"></a>
-                    <a href="https://www.instagram.com/"><img class="logos" src="./assets/instagram.png" width="50px"></a>
+                    <h3>&bull; Seguinos &bull;</h3>
+                    <div class="underline"></div>
+                    <div class="flex-wrap">
+                        <a href="https://www.facebook.com/"><img class="logos me-3" src="./assets/images/facebook.png"></a>
+                        <a href="https://www.instagram.com/"><img class="logos" src="./assets/images/instagram.png"></a>
+                    </div>
                 </div>
-                <footer class="text-center pt-3 mb-0 fs-6">
-                    <p>© 2024 Jero's Burgers</p>
-                </footer>
-              </div>
+            </div>
         </section>
-
         <div class="buffer-min"></div>
     </main>
 
-    
+    <!-- FOOTER -->
+    <footer class="glass text-center">
+            <p class="text-center py-3 mb-0 text-white fw-light">© 2024 Jero's Burgers</p>
+    </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 
 </html>

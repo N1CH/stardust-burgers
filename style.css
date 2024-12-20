@@ -1,29 +1,22 @@
+/* ola */
 html {
-    margin: auto;
-    scroll-behavior: smooth;
-}
-
-body {
     margin: 0;
     padding: 0;
-    font-size: 62.5%;
+    scroll-behavior: smooth;
+    font-weight: 500;
 }
 
-.nav-logo {
-    padding: 3px 3px;
-    margin: 0;
-}       
-
+/* BUFFERS */
 .buffer-min {
     height: 2rem;
+    scroll-margin-top: 5em;
 }
 
 .buffer {
     height: 10rem;
 }
 
-
-/* FONDO */
+/* BACKGROUND */
 #myVideo {
     position: fixed;
     right: 0;
@@ -33,29 +26,154 @@ body {
     z-index: -1;
 }
 
-/* CONTACTO */
-  input {
-    line-height: normal;
-    font-size: 4em;
-  }
-  
-  textarea {
-    overflow: auto;
-  }
-
-  .contact form {
-    padding: 30px;
-    margin: 20px 0;
-    padding-bottom: 0px;
+/* FUENTES */
+h1,
+h4 {
+    font-family: "Audiowide", serif;
+    color: white;
 }
 
-.contact h1 {
-    color: #474544;
-    font-size: 30px;
+h2,
+h3,
+a,
+p,
+form {
+    font-family: 'Orbitron', serif;
+}
+
+h1,
+h4 {
+    font-size: 9rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0 6rem;
+}
+
+h3 {
+    color: white;
+    font-size: 1.7rem;
+    text-align: center;
     font-weight: 700;
     letter-spacing: 7px;
-    text-align: center;
     text-transform: uppercase;
+}
+
+h4 {
+    font-size: 1.7rem;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* NAVBAR */
+.navbar {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar .nav-link,
+.navbar-brand {
+    color: white;
+}
+
+.navbar-nav .nav-item a:hover,
+.dropdown-menu .dropdown-item:hover,
+.nav-logo:hover,
+.nav-link:hover,
+.nav-link:focus,
+.dropdown-item:hover,
+.dropdown-item:focus {
+    transform: scale(1.05);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: black;
+}
+
+/* IMAGENES */
+.nav-logo {
+    width: 4.5rem;
+}
+
+.hero {
+    align-items: center;
+}
+
+.img-hero,
+.img-hero-mobile {
+    width: 55rem;
+    animation: floatingDrift 8s ease-in-out infinite;
+}
+
+.img-hero-mobile {
+    display: none;
+}
+
+.img-container {
+    width: 19rem;
+}
+
+.img-container img,
+.img-hero,
+.img-hero-mobile,
+.logos,
+.nav-logo {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-container:hover img,
+.logos:hover {
+    transform: scale(1.09);
+}
+
+/* ANIMACIONES */
+@keyframes floatingDrift {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.hero h1 {
+    animation: nebulosaGlow 2.5s ease-in-out forwards;
+    opacity: 0;
+    filter: blur(3px);
+}
+
+@keyframes nebulosaGlow {
+    0% {
+        opacity: 0;
+        filter: blur(3px);
+        text-shadow: 0 0 10px rgba(173, 216, 230, 0.5);
+    }
+
+    50% {
+        opacity: 0.5;
+        filter: blur(1px);
+        text-shadow: 0 0 20px rgba(173, 216, 230, 0.7);
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0);
+        text-shadow: 0 0 40px rgba(173, 216, 230, 0.9);
+    }
+}
+
+/* CONTACTO */
+.contact form {
+    padding: 30px;
+    margin: 20px 0;
 }
 
 .underline {
@@ -64,114 +182,160 @@ body {
     width: 80px;
 }
 
-.email {
-    float: right;
-    width: 45%;
-}
-
-#exampleFormControlTextarea1,
-textarea:focus,
-input[type="text"]:focus,
-input[type="email"]:focus,
-.uneditable-input:focus {
-    border-color: rgba(172, 172, 172, 0.8);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(99, 99, 99, 0.6);
-    outline: 0 none;
-}
-
-input[type='text'], [type='email'], select, textarea {
-    background: none;
-    border: none;
-    border-bottom: solid 2px #474544;
-    color: #474544;
-    font-size: 1.250em;
-    font-weight: 400;
-    letter-spacing: 1px;
-    margin: 0em 0 1.875em 0;
-    padding: 0 0 0.875em 0;
-    text-transform: uppercase;
-    width: 100%;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-}
-
-input[type='text']:focus, [type='email']:focus, textarea:focus {
-    outline: none;
-    padding: 0 0 0.875em 0;
-}
-
-.message {
-    float: none;
-}
-
+.email,
 .name {
     float: left;
     width: 45%;
 }
 
-.subject {
-    width: 100%;
+.email {
+    float: right;
 }
 
-.telephone {
+input[type="text"],
+[type="email"],
+select,
+textarea {
+    background: none;
+    border: none;
+    border-bottom: solid 2px #474544;
+    color: white;
+    font-size: 0.7em;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 0 0 1.875em 0;
+    padding: 0 0 0.875em 0;
+    text-transform: uppercase;
     width: 100%;
+    transition: all 0.3s;
 }
 
 textarea {
     line-height: 150%;
     height: 150px;
     resize: none;
-    width: 100%;
+}
+
+#exampleFormControlTextarea1,
+textarea:focus,
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border-color: rgba(172, 172, 172, 0.8);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(99, 99, 99, 0.6);
+    outline: 0 none;
 }
 
 #form_button {
     background: none;
-    border: solid 2px #474544;
-    color: #474544;
+    border: solid 2px white;
+    color: white;
     cursor: pointer;
     display: inline-block;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
+    font-size: 0.875rem;
     font-weight: bold;
     outline: none;
-    padding: 20px 35px;
     text-transform: uppercase;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
     transition: all 0.3s;
 }
 
 #form_button:hover {
-    background: #474544;
-    color: #F2F3EB;
+    background: white;
+    color: black;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
 }
 
-/* FUENTES */
-h1.display-2
-{
-    font-family: 'Rock Salt', cursive;
-    font-size: 5rem;
-    letter-spacing: 5px;
+/* TARJETAS */
+.glass {
+    background-color: rgba(45, 45, 45, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-div div h2 {
-    font-family: 'Rock Salt', cursive;
+.logos {
+    margin-top: 3rem;
+    width: 3rem;
 }
 
-body,
-h2,
-p,
-.lead {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
+/* MEDIA QUERY */
+@media (max-width: 800px) {
+
+    /* FUENTES */
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+        margin: 1rem 0;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    h4 {
+        font-size: 0.8rem;
+    }
+
+    input[type="text"],
+    [type="email"],
+    select,
+    textarea {
+        font-size: 0.6rem;
+    }
+
+    #form_button {
+        margin-bottom: 2rem;
+        font-size: 0.8rem;
+    }
+
+    .hero {
+        align-items: start;
+    }
+
+    /* IMAGENES */
+    .nav-logo {
+        width: 3.5rem;
+        margin-left: 0.1rem;
+    }
+
+    .nav-link,
+    .dropdown-item
+    {
+        font-size: 0.95rem;
+    }
+
+    .img-hero {
+        display: none;
+    }
+
+    .img-hero-mobile {
+        display: block;
+        width: 20rem;
+        margin-top: 2rem;
+    }
+
+    .img-container {
+        width: 8rem;
+    }
+
+    .logos {
+        margin-top: 2rem;
+        width: 2rem;
+    }
+
+    /* BUFFERS */
+    .buffer-min {
+        height: 1rem;
+        scroll-margin-top: 10rem;
+    }
+
+    .buffer {
+        height: 3rem;
+    }
+
+    footer p {
+        font-size: 0.7rem;
+    }
 }
