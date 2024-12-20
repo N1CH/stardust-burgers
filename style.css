@@ -106,7 +106,7 @@ footer p {
 
 .img-hero,
 .img-hero-mobile {
-    width: 55rem;
+    width: 54rem;
     animation: floatingDrift 8s ease-in-out infinite;
 }
 
@@ -262,11 +262,11 @@ input[type="email"]:focus {
 
     /* FUENTES */
     h1 {
-        font-size: 4rem;
+        font-size: 3.9rem;
     }
 
     h2 {
-        font-size: 1.1rem;
+        font-size: 1rem;
         margin: 1rem 0;
     }
 
@@ -313,7 +313,6 @@ input[type="email"]:focus {
     .img-hero-mobile {
         display: block;
         width: 20rem;
-        margin-top: 2rem;
     }
 
     .img-container {
@@ -328,7 +327,6 @@ input[type="email"]:focus {
     /* BUFFERS */
     .buffer-min {
         height: 1rem;
-        scroll-margin-top: 10rem;
     }
 
     .buffer {
