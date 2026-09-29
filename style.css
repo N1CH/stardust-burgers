@@ -1,4 +1,3 @@
-/* ola */
 html {
     margin: 0;
     padding: 0;
@@ -17,13 +16,61 @@ html {
 }
 
 /* BACKGROUND */
+.background-fallback {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background: #100b1e url('./assets/bg/space-poster.webp') center / cover no-repeat;
+    pointer-events: none;
+}
+
 #myVideo {
     position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     z-index: -1;
+    pointer-events: none;
+}
+
+.motion-toggle {
+    position: fixed;
+    right: 0.4rem;
+    bottom: 0.4rem;
+    z-index: 100;
+    display: grid;
+    place-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 0.5rem;
+    background: rgba(45, 45, 45, 0.9);
+    color: white;
+    cursor: pointer;
+}
+
+.motion-toggle svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    fill: currentColor;
+}
+
+.motion-toggle[data-playing="true"] .icon-play,
+.motion-toggle[data-playing="false"] .icon-pause {
+    display: none;
+}
+
+.motion-toggle:hover,
+.motion-toggle:focus-visible {
+    background: #555;
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
+
+.motion-toggle[hidden] {
+    display: none;
 }
 
 /* FUENTES */
@@ -94,7 +141,7 @@ footer p {
 .nav-link:focus,
 .dropdown-item:hover,
 .dropdown-item:focus {
-    color: black;
+    color: white;
     background-color: transparent;
 }
 
@@ -110,6 +157,7 @@ footer p {
 .img-hero,
 .img-hero-mobile {
     width: 54rem;
+    height: auto;
     animation: floatingDrift 8s ease-in-out infinite;
 }
 
@@ -165,7 +213,6 @@ footer p {
         filter: blur(1px);
         text-shadow: 0 0 20px rgba(173, 216, 230, 0.7);
     }
-
     100% {
         opacity: 1;
         filter: blur(0);
@@ -174,13 +221,20 @@ footer p {
 }
 
 /* CONTACTO */
+.form-note {
+    margin: 2rem 1rem 0;
+    color: rgba(255, 255, 255, 0.85);
+    text-align: center;
+    font-size: 0.8rem;
+}
+
 .contact form {
     padding: 30px;
     margin: 20px 0;
 }
 
 .underline {
-    border-bottom: solid 2px #474544;
+    border-bottom: solid 2px rgba(255, 255, 255, 0.55);
     margin: -0.512em auto;
     width: 80px;
 }
@@ -201,7 +255,7 @@ select,
 textarea {
     background: none;
     border: none;
-    border-bottom: solid 2px #474544;
+    border-bottom: solid 2px rgba(255, 255, 255, 0.55);
     color: white;
     font-size: 0.7em;
     font-weight: 400;
@@ -217,6 +271,12 @@ textarea {
     line-height: 150%;
     height: 150px;
     resize: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: rgba(255, 255, 255, 0.75);
+    opacity: 1;
 }
 
 #exampleFormControlTextarea1,
@@ -260,30 +320,69 @@ input[type="email"]:focus {
     align-items: center;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.4s ease-in-out;
     color: white;
     font-size: 1.2rem;
     padding: 20px;
     z-index: 9999;
 }
 
-.alerta-glass p {
+.alerta-glass[hidden] {
+    display: none;
+}
+
+.alerta-glass.is-visible {
+    opacity: 1;
+}
+
+.alerta-glass span {
     background: rgba(0, 0, 0, 0.7);
     padding: 20px;
     border-radius: 10px;
+    text-align: center;
 }
 
 /* TARJETAS */
 .glass {
-    background-color: rgba(45, 45, 45, 0.6);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(45, 45, 45, 0.78);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@supports ((backdrop-filter: blur(8px)) or (-webkit-backdrop-filter: blur(8px))) {
+    .navbar.glass {
+        background-color: rgba(45, 45, 45, 0.68);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .img-hero,
+    .img-hero-mobile,
+    .hero h1 {
+        animation: none;
+    }
+
+    .hero h1 {
+        opacity: 1;
+        filter: none;
+    }
+
+    [data-aos].aos-init {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
 }
 
 .logos {
     margin-top: 3rem;
     width: 3rem;
+    height: auto;
 }
 
 /* MEDIA QUERY: TABLET */
@@ -432,6 +531,7 @@ input[type="email"]:focus {
     .img-hero-mobile {
         display: block;
         width: 20rem;
+        max-width: 100%;
     }
 
     .img-container {
@@ -452,13 +552,23 @@ input[type="email"]:focus {
         height: 3rem;
     }
 
-    footer p {
+    footer p.py-3 {
         font-size: 0.7rem;
+        height: 2.5rem;
+        line-height: 2.5rem;
+        padding-block: 0 !important;
+        white-space: nowrap;
     }
 
     /* MODAL CONTACTO */
     .alerta-glass {
         font-size: 0.6rem;
         padding: 20px;
+    }
+}
+
+@media (max-width: 350px) {
+    h1 {
+        font-size: clamp(2.5rem, 15.5vw, 3.4rem);
     }
 }
